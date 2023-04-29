@@ -37,7 +37,6 @@
             List<FormModel> Details = (List<FormModel>) request.getAttribute("UserDetails");
             for (FormModel data : Details) {
             %>
-            
             <tr>
                 <td><%= data.getUserName() %></td>
                 <td><%= data.getDate() %></td>

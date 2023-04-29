@@ -12,8 +12,6 @@
 			height: 100vh; 
 		}
 	</style>
-	
-
 </head>
 <body bgcolor="lavender"> 
 
@@ -27,12 +25,10 @@
 			<td>
 			<label>OTP:</label>
 			</td>
-			 
 			<td>
 			<input type="number" id="OTP" maxlength="5" name="OTP" required="required"/>
 			</td>
 			</tr>
-			
 			<tr>
 			<td>
 			<label>Email:</label>
@@ -41,10 +37,7 @@
 			<input type="email" value="${Email}" disabled="disabled"/>
 			</td>
 			</tr>
-			<input type="hidden" name="Email" id="Email" value="${Email}"/>
-			
-			
-			
+			<input type="hidden" name="Email" id="Email" value="${Email}"/>	
 			<tr>
 			<td>
 			<label>First Password:</label>
@@ -53,14 +46,11 @@
 			<input type="password" id="Password" name="Password" required/>
 			</td>
 			</tr>
-			
 			<tr>
 			<td>
 			<label>Second Password:</label>
 			</td>
 			</tr>
-			
-			
 			<tr>
 			<td>
 			<select name="SecondPasswordQuestion1" id="SecondPassword1" onchange="onChangeField1()" style="width: 100px">
@@ -91,7 +81,6 @@
 			<input type="text" id="Answer1" name="SecondPasswordAnswer1" required="required"/>
 			</td>
 			</tr>
-			
 			<tr>
 			<td>
 			<select name="SecondPasswordQuestion2"  id="SecondPassword2" onchange="onChangeField2()" style="width: 100px">
@@ -122,7 +111,6 @@
 			<input type="text" id="Answer2" name="SecondPasswordAnswer2"="required"/>
 			</td>
 			</tr>
-			
 			<tr>
 			<td>
 			<select name="SecondPasswordQuestion3"  id="SecondPassword3" onchange="onChangeField3()" style="width: 100px">
@@ -152,10 +140,8 @@
 			<td>
 			<input type="text" id="Answer3" name="SecondPasswordAnswer3" required="required"/>
 			</td>
-			</tr>
-			
-			 <% List<Images> images = (List<Images>) request.getAttribute("images"); %>
-			
+			</tr>		
+			 <% List<Images> images = (List<Images>) request.getAttribute("images"); %>			
 			<tr>
 			<td>
 			  <% for (Images image : images) { %>
@@ -163,47 +149,24 @@
         <img src="data:image/png;base64, <%= new String(Base64.getEncoder().encode(image.getCar())) %>" style="height: 50px; width: 50px"/> 
            <% } %>
 			<td>
-			</tr>
-			
-			
-			
-			<tr>
-			
-			<td>
-			
+			</tr>		
+			<tr>		
+			<td>	
 			 <% for (Images image : images) { %>
           <input type="radio" name="ThirdPasswordTraffic" value="<%= image.getTrafficName()%>" required="required">
         <img src="data:image/png;base64, <%= new String(Base64.getEncoder().encode(image.getTraffic())) %>" style="height: 50px; width: 50px"/>  
             <% } %>
 			</td>
-			</tr>
-			
-			
-			
-			
-			<tr>
-			
-			<td>
-			
-			
+			</tr>		
+			<tr>			
+			<td>	
 			 <% for (Images image : images) { %> 
           <input type="radio" name="ThirdPasswordTree" value="<%= image.getTreeName()%>" required="required">
         <img src="data:image/png;base64, <%= new String(Base64.getEncoder().encode(image.getTree())) %>" style="height: 50px; width: 50px"/>      
     <% } %>
-			</td>
-			
-			</tr>
-			
-			
-    
-  
-           
-	
-			
-			
-			</table>
-			
-			
+			</td>		
+			</tr>		
+			</table>		
 			<input type="submit" value="submit"/>
 			</form>
 		</div>

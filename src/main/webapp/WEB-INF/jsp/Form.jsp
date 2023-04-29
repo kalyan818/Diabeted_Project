@@ -18,7 +18,7 @@
 		<div>
 		<center><label><h2 style="color:red; ">${message}</h2></label></center>
 		<form action="/FillForm" method="post">
-			<center><label>OTP</label></center><br>
+			<center><label>Diabetes</label></center><br>
 			<table>
 			<tr>
 			<td>
